@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="src/vendor/jquery.min.js"></script>
+    <script src="src/vendor/underscore-min.js"></script>
+    <script src="src/vendor/backbone-min.js"></script>
+</head>
+<body>
+
+<ul id="campaigns"></ul>
+
+<script src="src/app.js"></script>
+<script src="src/common/campaigns-collection.js"></script>
+<script src="src/common/campaign-model.js"></script>
+<script src="src/campaigns/campaigns.js"></script>
+<script src="src/campaigns/campaigns-collectionview.js"></script>
+<script src="src/campaigns/campaign-view.js"></script>
+
+<!-- templates -->
+
+<script type="text/template" id="campaign-template">
+    <li>
+        <%= campaign.name %>
+        <%= campaign.description %>
+        <%= campaign.priority %>
+    </li>
+</script>
+</body>
+</html>
