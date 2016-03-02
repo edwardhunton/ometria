@@ -1,0 +1,15 @@
+.campaigns{
+    list-style: none;
+}
+
+.o-button{
+    width:300px;
+    text-align: left;
+    padding: 10px;
+    margin: 5px;
+}
+
+.tot{
+    font-size: 20px;
+    font-weight: bolder;
+}

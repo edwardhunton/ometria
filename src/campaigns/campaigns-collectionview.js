@@ -2,7 +2,7 @@ var CampaignsCollectionView = function(){
 
 
    var that = this;
-    var target = $('#campaigns');
+    var target = $('.campaigns');
     var campaignsCollectionView = [];
 
 

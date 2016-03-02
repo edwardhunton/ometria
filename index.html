@@ -2,30 +2,73 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Ometria</title>
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
     <script src="src/vendor/jquery.min.js"></script>
     <script src="src/vendor/underscore-min.js"></script>
     <script src="src/vendor/backbone-min.js"></script>
+    <script src="src/vendor/d3.min.js"></script>
+    <script src="src/vendor/nv.d3.js"></script>
 </head>
 <body>
 
-<ul id="campaigns"></ul>
+<div class="container">
+
+    <div class="row col-md-5">
+
+        <h2>Current Campaigns</h2>
+
+        <ul class="campaigns"></ul>
+
+    </div>
+
+    <div class="row col-md-5">
+
+        <h2>Campaign Deatils</h2>
+
+        <div class="campaignsdetail"></div>
+        <div class="campaignstimeseries"></div>
+
+    </div>
+
+</div>
 
 <script src="src/app.js"></script>
 <script src="src/common/campaigns-collection.js"></script>
 <script src="src/common/campaign-model.js"></script>
+<script src="src/common/campaigntimeseries-model.js"></script>
 <script src="src/campaigns/campaigns.js"></script>
 <script src="src/campaigns/campaigns-collectionview.js"></script>
 <script src="src/campaigns/campaign-view.js"></script>
+<script src="src/campaigns/campaigndetail-view.js"></script>
+<script src="src/campaigns/campaigntimeseries-view.js"></script>
 
 <!-- templates -->
 
 <script type="text/template" id="campaign-template">
-    <li>
-        <%= campaign.name %>
-        <%= campaign.description %>
-        <%= campaign.priority %>
-    </li>
+
+    <button type="button" class="o-button btn-primary"><strong><%= title %></strong> (<%= status %>) - <%= stats.revenue %></button>
+
+
+</script>
+<script type="text/template" id="campaigndetail-template">
+
+    <%= title %>
+    <%= status %>
+    <%= stats.revenue %>
+
+</script>
+<script type="text/template" id="campaigntimeseries-template">
+<h2>Totals</h2>
+  <div><span class="tot">Clicks: </span><span><%= clicks %></span></div>
+   <div><span class="tot">DT: </span><span> <%= dt %></span></div>
+<div><span class="tot">Opens: </span><span> <%= openes %></span></div>
+<div><span class="tot">Entries: </span><span> <%= entries %></span></div>
+<div><span class="tot">Send: </span> <span><%= sends %></span></div>
+<div><span class="tot">Revenue: </span><span> <%= revenue %></span></div>
+
+
 </script>
 </body>
 </html>

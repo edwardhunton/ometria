@@ -1,5 +1,6 @@
 var CampaignsCollection = Backbone.Collection.extend({
 
+   // model: 'Campaign',
 
 
     init: function(){
