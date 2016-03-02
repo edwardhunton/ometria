@@ -1,3 +1,3 @@
 # ometria
 
-Application starst at index.html
+Application starts at index.html
